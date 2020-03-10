@@ -6,6 +6,7 @@ DROP TABLE TITLE CASCADE CONSTRAINTS ;
 DROP TABLE Title_Cast CASCADE CONSTRAINTS ;
 DROP TABLE TITLE_GENRE CASCADE CONSTRAINTS ;
 DROP TABLE KNOWNFOR CASCADE CONSTRAINTS ;
+DROP TABLE Title_Crew CASCADE CONSTRAINTS ;
 
 CREATE TABLE Title (
      TitleID varchar(9) PRIMARY KEY,
@@ -54,4 +55,10 @@ CREATE TABLE Profession_Names(
     NameID varchar(9) REFERENCES Name(NameID),
     ProfessionID number(4) REFERENCES Professions(ProfessionID),
     PRIMARY KEY(NameID,ProfessionID)
+);
+
+CREATE TABLE Title_Crew(
+    JobRole varchar(32) PRIMARY KEY,
+    NameID varchar(9) REFERENCES Name(NameID),
+    TitleId varchar(9) REFERENCES Title(TitleID)
 );
