@@ -11,25 +11,25 @@ DROP TABLE Title_Crew CASCADE CONSTRAINTS ;
 CREATE TABLE Title (
      TitleID varchar(9) PRIMARY KEY,
      Title varchar(255),
-     Released number(4),
-     AverageRating number(3,2),
-     NumVotes number(7)
+     Released int(4),
+     AverageRating int(3,2),
+     NumVotes int(7)
 );
 
 CREATE TABLE Name(
     NameID varchar(9) PRIMARY KEY,
     Name varchar(100),
-    BirthYear number(4),
-    DeathYear number(4)
+    BirthYear int(4),
+    DeathYear int(4)
 );
 
 CREATE TABLE Genres(
-    GenreID number(3) PRIMARY KEY,
+    GenreID int(3) PRIMARY KEY,
     Genre varchar(32)
 );
 
 CREATE TABLE Professions(
-    ProfessionID number(4) PRIMARY KEY,
+    ProfessionID int(4) PRIMARY KEY,
     Profession varchar(32)
 );
 
@@ -40,7 +40,7 @@ CREATE TABLE Title_Cast(
 );
 
 CREATE TABLE Title_Genre(
-    GenreID number(3) REFERENCES Genres(GenreID),
+    GenreID int(3) REFERENCES Genres(GenreID),
     TitleId varchar(9) REFERENCES Title(TitleID),
     PRIMARY KEY (GenreID, TitleId)
 );
@@ -53,7 +53,7 @@ CREATE TABLE KnownFor(
 
 CREATE TABLE Profession_Names(
     NameID varchar(9) REFERENCES Name(NameID),
-    ProfessionID number(4) REFERENCES Professions(ProfessionID),
+    ProfessionID int(4) REFERENCES Professions(ProfessionID),
     PRIMARY KEY(NameID,ProfessionID)
 );
 
