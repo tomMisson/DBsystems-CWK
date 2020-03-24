@@ -6,4 +6,4 @@ SELECT genres FROM
     SELECT GENRE2 AS genres FROM otitles 
     UNION 
     SELECT GENRE3 AS genres FROM  otitles
-) A
+) A;

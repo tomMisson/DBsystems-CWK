@@ -6,4 +6,4 @@ SELECT prof FROM
     SELECT Profession2 AS prof FROM onames 
     UNION 
     SELECT Profession3 AS prof FROM  onames
-) A
+) A;
