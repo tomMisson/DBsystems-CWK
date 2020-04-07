@@ -7,4 +7,4 @@ Wahab Rehman (17068255)
 SELECT * FROM Effort WHERE team='us';
 ```
 
-[Link to report](https://docs.google.com/document/d/1qnPwVcKuyfexHiwUnmUzzwjoEX6eVLKFwuhlQDsfdWg/edit#)
+[Link to report](https://drive.google.com/file/d/10dhaNXwD5Tiustk60HboqLlAQl58UD87/view?usp=sharing)
